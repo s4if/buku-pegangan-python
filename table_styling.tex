@@ -1,0 +1,11 @@
+% Table styling configuration
+\usepackage{array}
+\usepackage{booktabs}
+
+% Global table settings
+\setlength{\tabcolsep}{12pt} % Horizontal padding (default: 6pt)
+\renewcommand{\arraystretch}{1.5} % Vertical padding (default: 1.0)
+
+% Left-alignment for all columns
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
