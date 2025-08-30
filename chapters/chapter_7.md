@@ -240,6 +240,36 @@ Output:
 Halo, nama saya Budi, umur saya 16 tahun.
 ```
 
+Selain `f-string`, Python juga menyediakan cara lain untuk format string menggunakan metode `.format()`. Dengan cara ini, kita bisa menyisipkan nilai ke dalam string menggunakan tanda kurung kurawal `{}`.
+
+Contoh:
+
+```python
+nama = "Budi"
+umur = 16
+print("Halo, nama saya {}, umur saya {} tahun.".format(nama, umur))
+```
+
+Output:
+
+```text
+Halo, nama saya Budi, umur saya 16 tahun.
+```
+
+Kita juga bisa menentukan urutan atau nama variabel:
+
+```python
+print("Nama: {0}, Umur: {1}".format("Andi", 20))
+print("Nama: {nama}, Umur: {umur}".format(nama="Siti", umur=18))
+```
+
+Output:
+
+```text
+Nama: Andi, Umur: 20
+Nama: Siti, Umur: 18
+```
+
 ## Multi-line String
 
 String pada umumnya terdiri dari 1 baris saja, akan tetapi saat butuh strng multibars, string bisa dibuat dengan tiga tanda kutip (`'''...'''` atau `"""..."""`).

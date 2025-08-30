@@ -47,14 +47,14 @@
             "underline": false
         },
         "Comment": {
-            "text-color": "#60a0b0",
+            "text-color": "#56909e",
             "background-color": null,
             "bold": false,
             "italic": false,
             "underline": false
         },
         "CommentVar": {
-            "text-color": "#60a0b0",
+            "text-color": "#56909e",
             "background-color": null,
             "bold": true,
             "italic": false,
@@ -180,7 +180,7 @@
             "underline": false
         },
         "String": {
-            "text-color": "#4070a0",
+            "text-color": "#3a6590",
             "background-color": null,
             "bold": false,
             "italic": false,
