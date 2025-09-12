@@ -24,7 +24,7 @@ pandoc_cmd = [
     "--include-before-body",
     "cover.tex",
     "-V",
-    "toc-title=Table of contents",
+    "toc-title=Daftar Isi",
 ]
 
 output_path = os.path.join(output_dir, output_filename)
