@@ -398,7 +398,7 @@ def hitung_pangkat(angka, pangkat=2):
 print(hitung_pangkat.__doc__)
 ```
 
-## 6. Studi Kasus: Aplikasi Kalkulator Sederhana
+## Studi Kasus: Aplikasi Kalkulator Sederhana
 
 Mari terapkan konsep fungsi untuk membuat kalkulator sederhana:
 
