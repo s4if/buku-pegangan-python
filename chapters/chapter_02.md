@@ -186,16 +186,14 @@ Macamnya:
 
 ##### **Processing symbols**
 
-Menunjukan jenis operasi pengolahan dalam suatu proses / prosedur
-Macamnya:
-
+Menunjukan jenis operasi pengolahan dalam suatu proses / prosedur  
+Macamnya:  
 ![simbol_proses](images/simbol_proses.png)
 
 ##### **Input / Output symbols**
 
 Menunjukkan jenis input atau output dari suatu sistem
-Macamnya:
-
+Macamnya:  
 ![simbol_io](images/simbol_io.png)
 
 [^n4]: sumber: [https://id.wikipedia.org/wiki/Algoritma](https://id.wikipedia.org/wiki/Algoritma)
