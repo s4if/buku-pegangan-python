@@ -18,10 +18,12 @@
 \input{bullet_styling.tex}
 \input{chapter_breaks.tex}
 \input{blockquote.tex}
-\input{hyperref_setup.tex}
 \input{table_styling.tex}
 
 % Font settings using fontspec
 \usepackage{fontspec}
 \setmainfont{Ubuntu Nerd Font} % Set your main font
 \setmonofont{UbuntuMono Nerd Font} % Set your monospace (code) font
+
+% Load hyperref LAST to prevent command conflicts
+\input{hyperref_setup.tex}
