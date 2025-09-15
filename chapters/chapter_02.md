@@ -4,7 +4,7 @@
 
 ### **Sejarah Algoritma**
 
-Istilah "algoritma" berasal dari nama seorang ilmuwan Persia bernama Abu Ja’far Mohammed Ibn Musa al-Khowarizmi, yang hidup pada abad ke-9. Ia menulis sebuah buku berjudul *al-mukhtaṣar fī ḥisāb al-jabr wal-muqābala*, yang dalam bahasa Inggris dikenal sebagai *The Compendious Book on Calculation by Completion and Balancing*. Karya ini mengandung dasar-dasar ilmu aljabar dan dianggap sebagai salah satu buku matematika paling berpengaruh di dunia. Dari namanya, muncullah kata "algoritma" yang kini digunakan dalam dunia teknologi untuk menggambarkan urutan langkah yang logis untuk menyelesaikan masalah. [^n4]
+Istilah "algoritma" berasal dari nama seorang ilmuwan Persia bernama Abu Ja’far Mohammed Ibn Musa al-Khowarizmi, yang hidup pada abad ke-9. Ia menulis sebuah buku berjudul *al-Mukhtasar fi Hisab al-Jabr wal-Muqabala*, yang dalam bahasa Inggris dikenal sebagai *The Compendious Book on Calculation by Completion and Balancing*. Karya ini mengandung dasar-dasar ilmu aljabar dan dianggap sebagai salah satu buku matematika paling berpengaruh di dunia. Dari namanya, muncullah kata "algoritma" yang kini digunakan dalam dunia teknologi untuk menggambarkan urutan langkah yang logis untuk menyelesaikan masalah. [^n4]
 
 ### **Definisi Algoritma**
 

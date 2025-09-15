@@ -62,14 +62,14 @@ Tahap terakhir adalah membuat _algoritma_, yaitu serangkaian langkah atau instru
 
 Berpikir komputasional dilakukan secara bertahap dan berulang-ulang (iteratif) melalui tiga langkah utama: _Spesifikasi Masalah_ (_Problem Specification_), _Ekspresi Algoritmik_ (_Algorithmic Expression_), dan _Implementasi Solusi dan Evaluasi_ (_Solution Implementation & Evaluation_). Setiap tahap ini berperan penting dalam menyelesaikan masalah secara terstruktur.
 
-### Spesifikasi Masalah**
+### **Spesifikasi Masalah**
 
 Pada tahap ini, kita menganalisis masalah secara menyeluruh. Kita memecah masalah besar menjadi bagian-bagian kecil yang lebih mudah diatasi (_dekomposisi_), mengidentifikasi informasi yang penting dan membuang yang tidak relevan (_abstraksi_), serta mencari pola atau kesamaan dari masalah serupa yang pernah kita hadapi (_pengenalan pola_). Selain itu, kita juga menetapkan kriteria yang menunjukkan bahwa masalah tersebut sudah selesai dengan baik.
 
 **Contoh:**
 Kamu diminta membuat aplikasi sederhana untuk menghitung rata-rata nilai siswa. Pada tahap ini, kamu akan memecah masalah dengan menentukan input yang diperlukan (nilai siswa), proses penghitungan (menjumlahkan nilai dan membaginya dengan jumlah siswa), dan output yang diinginkan (rata-rata nilai). Di sini, kamu juga harus menetapkan apa yang dianggap sukses—misalnya, aplikasi harus menghitung rata-rata dengan benar tanpa error.
 
-### Ekspresi Algoritmik**
+### **Ekspresi Algoritmik**
 
 Setelah kita memahami masalah dengan jelas, tahap selanjutnya adalah membuat langkah-langkah atau instruksi yang harus diikuti untuk menyelesaikan masalah tersebut. Langkah-langkah ini bisa kita tuliskan dalam bentuk kalimat terstruktur, _pseudo code_ (kode semu yang menyerupai bahasa pemrograman), atau menggunakan _flowchart_ (bagan alur). Semua ini bertujuan agar solusi dapat dipahami dan diimplementasikan dengan mudah.
 
@@ -84,7 +84,7 @@ Untuk masalah menghitung rata-rata nilai siswa, langkah-langkah yang bisa kamu b
 
 Langkah-langkah tersebut bisa diubah menjadi _pseudo code_ atau digambarkan dalam bentuk _flowchart_ agar lebih mudah dipahami dan diimplementasikan.
 
-### Implementasi Solusi dan Evaluasi**
+### **Implementasi Solusi dan Evaluasi**
 
 Tahap terakhir adalah mengimplementasikan langkah-langkah yang sudah kita buat. Ini berarti kita menjalankan solusi yang sudah direncanakan dan kemudian mengevaluasi apakah hasilnya sesuai dengan harapan. Jika ada masalah atau kesalahan, kita kembali ke langkah sebelumnya dan memperbaiki algoritma. Setelah evaluasi, solusi tersebut bisa diterapkan pada masalah serupa di masa depan.
 

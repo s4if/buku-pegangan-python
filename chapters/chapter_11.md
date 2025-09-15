@@ -2,15 +2,17 @@
 
 ## **Pendahuluan**
 
-Halo semua! Selamat datang di bab yang menyenangkan! Di sini, kita akan belajar bagaimana kode yang baik itu seperti tanaman—dimulai dari biji yang kecil, lalu tumbuh dan berkembang menjadi sesuatu yang lebih kompleks dan terstruktur. Proses ini dalam pemrograman sering disebut **refactoring** (menulis ulang kode untuk meningkatkan strukturnya tanpa mengubah fungsinya) dan **evolusi kode**.
+Selamat datang di bab ini. Pada bagian ini, kita akan mempelajari bagaimana sebuah kode dapat berkembang layaknya tanaman—berawal dari sesuatu yang sederhana, kemudian bertumbuh menjadi lebih kompleks dan terstruktur. Dalam dunia pemrograman, proses ini dikenal dengan istilah **refactoring** (menyusun ulang kode untuk memperbaiki strukturnya tanpa mengubah fungsi) serta **evolusi kode**.
 
-Kita akan memulai dengan game sederhana, lalu secara bertahap memperbaikinya dengan menerapkan fungsi, struktur kontrol (seperti percabangan `if-else` dan perulangan `while`), dan struktur data (seperti `dictionary` dan `list`). Tujuannya adalah kalian bisa melihat langsung bagaimana sebuah program berevolusi dari versi sederhana menjadi versi yang lebih rapi dan powerful.
+Kita akan memulai dengan sebuah permainan sederhana, lalu secara bertahap menyempurnakannya dengan menambahkan fungsi, struktur kontrol (seperti percabangan `if-else` dan perulangan `while`), serta struktur data (seperti `dictionary` dan `list`). Dengan demikian, Anda dapat mengikuti secara langsung bagaimana sebuah program berkembang dari bentuk awal yang sederhana menuju versi yang lebih teratur dan lebih kuat.
 
-Mari kita mulai petualangan coding kita!
+Mari kita mulai pembahasan ini.
 
 ## Langkah 1: Game Dasar Pemain vs Monster
 
-**Tujuan:** Pada versi pertama, tujuan kita sederhana: membuat game turn-based (bergiliran) untuk satu pemain yang melawan sebuah monster. Pemain bisa melakukan serangan dasar atau menggunakan skill khusus.
+**Tujuan:**
+
+Pada versi pertama, tujuan kita sederhana: membuat game turn-based (bergiliran) untuk satu pemain yang melawan sebuah monster. Pemain bisa melakukan serangan dasar atau menggunakan skill khusus.
 
 **Kode:**
 
@@ -168,9 +170,9 @@ Kode ini memiliki fungsionalitas yang sama persis dengan Langkah 1. Namun, koden
 - **Fungsi `basic_attack`:** Menangani serangan dasar. Dengan membuatnya sebagai fungsi, kita bisa memanggilnya baik untuk player maupun monster (seperti yang terlihat pada `basic_attack(monster, player)`), tanpa perlu menulis kode yang sama dua kali. Ini prinsip **DRY (Don't Repeat Yourself)**.
 - **Fungsi `aksi_dijalankan`:** Menangani semua logika kompleks terkait pemilihan aksi. Fungsi ini menerima input `aksi`, `player`, dan `musuh`, lalu memutuskan apa yang harus dilakukan berdasarkan aksi tersebut.
 - **Loop utama** sekarang menjadi sangat bersih dan mudah dibaca. Alur program terlihat jelas: minta input, jalankan aksi, monster menyerang, tampilkan status.
-
-**Mempersiapkan Langkah Selanjutnya:**
-Dengan struktur berfungsi ini, kode kita sudah jauh lebih siap untuk dikembangkan! Sekarang, bayangkan kita ingin mengubah game ini dari Player vs Monster (PvE) menjadi Player vs Player (PvP). Apa yang perlu dilakukan?
+  
+**Mempersiapkan Langkah Selanjutnya**
+Dengan struktur yang sudah berfungsi, kode kini lebih siap untuk dikembangkan. Sebagai contoh, bayangkan jika permainan yang semula berbentuk *Player vs Monster* (PvE) diubah menjadi *Player vs Player* (PvP). Pertanyaan yang muncul adalah: langkah apa saja yang perlu dilakukan untuk mewujudkan perubahan tersebut?
 
 1. Kita perlu **dua set data player**, bukan satu player dan satu monster.
 2. Loop utama perlu diubah agar kedua player bergantian memilih aksi.
@@ -180,7 +182,7 @@ Keterbatasan kode saat ini adalah data monster (`monster = dict(...)`) dan logik
 
 ## Langkah 3: Evolusi Menuju Game Multiplayer (PvP)
 
-**Tujuan:** Mengembangkan game PvE kita menjadi game Player vs Player (PvP) yang lebih seru, di mana dua pemain saling bertarung.
+**Tujuan:** Mengembangkan game PvE kita menjadi game Player vs Player (PvP), di mana dua pemain saling bertarung.
 
 **Kode:**
 
@@ -266,33 +268,36 @@ elif player1['hp'] < player2['hp']: print('Player2 Menang')
 else : print('Imbang')
 ```
 
-**Penjelasan Keadaan Saat Ini:**
-Sekarang game kita telah menjadi game PvP! Dua pemain, `player1` dan `player2`, saling berhadapan. Keduanya memiliki data yang sama-sama kompleks (nama, HP, MP, damage, dan skill). Mereka bergantian menjalankan aksi.
+**Penjelasan Keadaan Saat Ini**
+Permainan kini telah berkembang menjadi mode *Player vs Player* (PvP). Dua pemain, yaitu `player1` dan `player2`, saling berhadapan dengan data karakter yang setara dalam kompleksitas, mencakup nama, HP, MP, *damage*, serta keterampilan (*skill*). Kedua pemain tersebut bergantian menjalankan aksi dalam permainan.
 
 **Penjelasan 'Bagaimana' dan 'Mengapa':**
 
 - **Perubahan Data:** Kita mengganti dictionary `monster` dengan dictionary `player2`. Struktur datanya sama dengan `player1`, yang membuktikan bahwa fungsi `basic_attack` dan `aksi_dijalankan` kita memang bersifat umum (bisa untuk player atau monster).
 - **Perubahan Loop Utama:** Loop `while` sekarang memeriksa HP kedua player. Di dalam loop, giliran setiap player ditandai dengan pesan `print("Giliran Player X!")`.
-- **Fungsi Tetap Sama:** Keajaiban refactoring terlihat di sini! Kita tidak perlu mengubah *isi* dari fungsi `input_aksi`, `basic_attack`, atau `aksi_dijalankan` sama sekali. Kita hanya perlu memanggilnya dengan parameter yang berbeda (`player1` dan `player2` bergantian sebagai `player` dan `musuh`). Ini menghemat banyak waktu dan tenaga!
+- **Fungsi Tetap Sama:** Kita tidak perlu mengubah *isi* dari fungsi `input_aksi`, `basic_attack`, atau `aksi_dijalankan` sama sekali. Kita hanya perlu memanggilnya dengan parameter yang berbeda (`player1` dan `player2` bergantian sebagai `player` dan `musuh`). Ini menghemat banyak waktu dan tenaga!
 - **Kondisi Akhir:** Kita menambahkan kondisi `elif` untuk menangani kemungkinan hasil imbang.
 
-**Keterbatasan untuk Pengembangan Lebih Lanjut:**
-Game PvP kita sudah cukup keren! Namun, selalu ada ruang untuk improvement. Misalnya:
+## Keterbatasan untuk Pengembangan Lebih Lanjut
 
-1. **Pemain bisa memilih Kelas:** Pemain 1 dan 2 pada kode sebelumnya hanya bisa menggunakan kelas yang tersedia. Bagaimana caranya supaya tiap bisa memilih kelas (misal Swordsman, Spearman, Mage, Paladin, dsb)?.
-2. **AI untuk Monster:** Bagaimana jika kita ingin membuat mode PvE lagi, tetapi monsternya bisa menggunakan skill seperti player? Kita perlu membuat fungsi AI untuk memilih aksi.
-3. **Manajemen Kode yang Lebih Baik:** Jika jumlah skill atau properti player bertambah, kode dalam dictionary akan sangat panjang. Kita bisa mempertimbangkan untuk menggunakan **Kelas (Class)** dalam Pemrograman Berorientasi Objek (OOP) untuk mengelolanya dengan lebih rapi.
+Meskipun permainan PvP yang telah dibuat sudah berfungsi dengan baik, selalu terdapat ruang untuk pengembangan lebih lanjut. Beberapa kemungkinan perbaikan yang dapat dipertimbangkan antara lain:
 
-Ini semua adalah tantangan yang bisa kalian coba sendiri!
+1. **Pilihan Kelas Pemain:** Pada versi sebelumnya, pemain hanya dapat menggunakan kelas yang telah ditentukan. Sebagai pengembangan, permainan dapat dibuat agar setiap pemain dapat memilih kelas tertentu, misalnya *Swordsman*, *Spearman*, *Mage*, atau *Paladin*.
+
+2. **AI untuk Monster:** Jika ingin menambahkan kembali mode PvE, monster dapat diberikan kemampuan untuk menggunakan keterampilan layaknya pemain. Untuk itu, diperlukan fungsi AI yang dapat menentukan aksi yang dilakukan oleh monster.
+
+3. **Manajemen Kode yang Lebih Baik:** Seiring bertambahnya jumlah keterampilan atau properti pemain, struktur data dalam bentuk *dictionary* akan menjadi semakin panjang dan sulit dikelola. Dalam hal ini, penggunaan **kelas (Class)** dengan pendekatan Pemrograman Berorientasi Objek (OOP) dapat menjadi solusi yang lebih rapi dan terstruktur.
+
+Poin-poin di atas merupakan tantangan yang dapat dicoba secara mandiri untuk melanjutkan pengembangan permainan.
 
 ## Ringkasan Pelajaran
 
-Mari kita lihat kembali perjalanan evolusi kode kita:
+Perjalanan evolusi kode dalam bab ini dapat dirangkum sebagai berikut:
 
-1. **Langkah 1 (Dasar):** Kita memulai dengan kode yang berantakan namun fungsional. Kita belajar menggunakan **dictionary** untuk menyimpan data kompleks dan **struktur kontrol** (`while`, `if-elif-else`) untuk mengatur alur permainan. Keterbatasannya: kode tidak modular dan sulit dikembangkan.
+1. **Langkah 1 (Dasar):** Kita memulai dengan kode yang masih sederhana dan belum terstruktur dengan baik, namun sudah berfungsi. Pada tahap ini, kita belajar menggunakan **dictionary** untuk menyimpan data yang lebih kompleks, serta **struktur kontrol** (`while`, `if-elif-else`) untuk mengatur alur permainan. Keterbatasannya adalah kode tidak modular dan sulit dikembangkan lebih lanjut.
 
-2. **Langkah 2 (Refactoring):** Kita memperkenalkan **fungsi** untuk memecah kode menjadi blok-blok yang spesifik. Ini meningkatkan keterbacaan dan memudahkan pemeliharaan. Prinsip **DRY (Don't Repeat Yourself)** diterapkan dengan membuat fungsi `basic_attack` yang bisa digunakan oleh berbagai karakter.
+2. **Langkah 2 (Refactoring):** Kita kemudian memperkenalkan **fungsi** untuk memecah kode menjadi bagian-bagian yang lebih spesifik. Hal ini meningkatkan keterbacaan sekaligus memudahkan pemeliharaan. Prinsip **DRY (Don't Repeat Yourself)** diterapkan, misalnya dengan membuat fungsi `basic_attack` yang dapat digunakan oleh berbagai karakter.
 
-3. **Langkah 3 (Evolusi PvP):** Berkat fondasi fungsi yang kuat, kita dengan mudah mengubah game PvE menjadi PvP hanya dengan mengubah **data** (dari monster menjadi player2) dan **logika utama** (urutan pemanggilan fungsi), tanpa perlu menyentuh logika di dalam fungsi-fungsi tersebut.
+3. **Langkah 3 (Evolusi PvP):** Dengan fondasi fungsi yang sudah terbangun, kita dapat mengubah permainan dari PvE menjadi PvP hanya dengan menyesuaikan **data** (dari monster menjadi player2) dan **logika utama** (urutan pemanggilan fungsi). Perubahan ini tidak memerlukan penyesuaian pada isi fungsi-fungsi yang telah dibuat.
 
-Kunci utamanya adalah: **Rencanakan struktur kode kalian dengan baik. Mulailah dengan sederhana, lalu refactor ke dalam fungsi-fungsi yang jelas agar kode kalian mudah dikembangkan di masa depan.** Selamat coding
+Inti dari pembelajaran ini adalah pentingnya merencanakan struktur kode dengan baik. Mulailah dari bentuk sederhana, lalu lakukan refactoring ke dalam fungsi-fungsi yang jelas agar kode dapat berkembang dengan lebih mudah di masa depan.
