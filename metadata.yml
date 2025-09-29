@@ -1,5 +1,2 @@
 ---
-title: Buku Pegangan Python SMK
-subtitle: Untuk SMKIT Ihsanul Fikri Mungkid
-author: Saiful Habib
-date: \today
+titlepage: false
